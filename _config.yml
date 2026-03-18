@@ -1,0 +1,61 @@
+# =============================================================================
+# 基本站点信息
+# =============================================================================
+title: "刘翔的个人主页"
+description: "个人学术主页"
+url: "https://6LiuXiang9.github.io"
+baseurl: ""
+
+# =============================================================================
+# 左侧栏个人信息（显示在左上角）
+# =============================================================================
+author:
+  name    : "刘翔"
+  avatar  : "images/avatar.jpg"   # 把你的照片命名为 avatar.jpg 放到 images/ 目录
+  bio     : "来自湖南。"
+  location: "Hunan, China"
+  employer: "HNFNU"
+
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:your@email.com"   # ← 填写你的邮箱
+
+# =============================================================================
+# Jekyll 构建设置
+# =============================================================================
+locale       : "zh-CN"
+repository   : "6LiuXiang9/6LiuXiang9.github.io"
+remote_theme : "academicpages/academicpages.github.io"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-gzip
+
+exclude:
+  - "*.sh"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "README.md"
+  - "LICENSE"
+
+# =============================================================================
+# 页面默认布局
+# =============================================================================
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true   # 控制左栏显示
+
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      share: false
